@@ -1,0 +1,566 @@
+@import url(stylenull.css);
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Mono:wght@400;500&family=Inter&display=swap');
+@font-face {
+  font-family: 'Audiowide', cursive;
+  font-family: 'DM Mono', monospace;
+  font-family: 'Inter', sans-serif;
+}
+
+[class*="_container"]{
+  max-width: 1200px;
+}
+body {
+  background: black;
+  color: white;
+  font-family: 'DM Mono', monospace;
+  font-size: 16px;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+.title_block{
+  font-family: 'Audiowide', cursive;
+  text-transform: uppercase;
+}
+.title_block.center{
+  text-align: center;
+  padding: 15px 0;
+  margin-bottom: 25px;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+}
+span.green{
+  color: #8DFD1B;
+}
+.text-centr{
+  color: #fff;
+  text-align: center;
+}
+.text-centr a{
+  color: #8DFD1B;
+}
+.line{
+  border: 1px solid #666464;
+  margin: 25px 0;
+}
+
+/* ===== Accordion ===== */
+.faq_accordion {
+  max-width: 576px;
+  width: 100%;
+}
+.accordion, .accordion-item{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 25px;
+  
+}
+.accordion-header{
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #67b816;
+}
+.accordion-header:hover{
+  cursor: pointer;
+}
+span.arrow{
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: "";
+  background-image: url(../img/icons/evenodd.svg);
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: 0.3s ease-in-out;
+}
+.accordion-body{
+  display: none;
+  overflow: hidden;
+  padding: 10px 15px;
+} 
+.accordion-item.open .accordion-body{
+  display: block;
+  border-bottom: 1px solid rgb(198, 93, 93);
+  animation: height 0.3s linear;
+}
+@keyframes height {
+  0% {
+    height: 0;
+  }
+  100% {
+      height: 100%;
+  }
+}
+.accordion-item.open .arrow{
+  transform: rotate(180deg);
+}
+
+/* Header */
+.navbar {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 16px;
+}
+
+.brand {
+  margin-right: 40px;
+}
+
+.logo {
+  max-width: 123px;
+  max-height: 32px;
+}
+
+.menu,
+.menu-items,
+.menu-icons {
+  display: flex;
+}
+
+.menu {
+  align-items: center;
+  width: 100%;
+}
+
+.menu-items {
+  flex-wrap: wrap;
+  gap: 40px;
+
+}
+
+.menu-items a {
+  color: white;
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.menu-items a:hover {
+  text-decoration: underline;
+}
+
+ul.menu-icons {
+  margin-left: auto;
+  gap: 12px;
+}
+
+/* Learn-more */
+.learn-more {
+  height: 653px;
+  display: flex;
+}
+
+.learn-more-info {
+  font-family: 'DM Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  max-width: 580px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 45px;
+}
+
+.learn-more-lable {
+  font-size: 51px;
+  font-family: 'Audiowide', monospace;
+}
+
+/* Btn */
+.btn {
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn_primare {
+  color: black;
+  background-color: #8DFD1B;
+  border: 1px solid #b4b7b1;
+  padding: 15px 25px;
+  transition: 0.1s;
+}
+.btn_primare:hover{
+  background-color: #67b816;
+}
+.btn-black{
+  padding: 15px 33px;
+  border: 1px solid #8DFD1B;
+  background: black;
+  color: white;
+  font-family: 'DM Mono', monospace;
+  font-size: 16px;
+}
+
+/* Wave-nft */
+.wave-nft .flex{
+  justify-content: space-between;
+}
+.wave-nft .left-block{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 410px;
+}
+.wave-nft .left-block .img-wrapp{
+  max-width: 360px;
+}
+.wave-nft .right-block{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 580px;
+  gap: 30px;
+}
+.color_tex_border{
+  margin: 0;
+  border-left: 2px solid #8DFD1B;
+  color: #8DFD1B;
+  padding-left: 22px;
+}
+.color_tex_border p.text{
+  font-family: 'DM Mono', monospace;
+  font-size: 21px;
+}
+
+.wave-nft h2{
+  font-size: 38px;
+  font-family: 'Audiowide', cursive;
+  margin-bottom: 20px;
+}
+.wave-nft h2 > span{
+  color: #A8A8A8;
+}
+
+/* marquee-container */
+.marquee-infinite {
+  margin: 30px auto;
+  border: 1px solid #000;
+  max-width: 100%;
+  overflow: hidden;
+}
+.marquee-infinite div {
+  display: flex;
+  width: 200%;
+  animation: marquee-infinite 5s linear infinite;
+}
+.marquee-infinite span {
+  font-family: 'Audiowide', cursive;
+  font-size: 79px;
+  white-space: nowrap;
+  width: 100%;
+}
+@keyframes marquee-infinite {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+/* artists-cards */
+.artists-cards .flex{
+  flex-wrap: wrap;
+  gap: 60px;
+}
+.artists-cards .artist-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.artists-cards .artist-card img{
+  width: 245px;
+  height: 245px;
+}
+
+/* story */
+.story{
+  margin-top: 60px;
+}
+.story .tabs_horizontal{
+  display: flex;
+}
+.story .tabs_horizontal > .nav_tab_list{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.story .tabs .nav_tab_list .btn_nav_tab{
+  color: #8DFD1B; 
+  min-width: 282px;
+  padding: 25px;
+  border: none;
+  background: none;
+}
+.story .tabs .nav_tab_list .btn_nav_tab:hover{
+  cursor: pointer;
+}
+.story .tabs .nav_tab_list .btn_nav_tab:hover.btn_nav_tab:not(.active){
+  background: #1e1b1b;
+  transition: 0.5s;
+}
+.story .tabs .nav_tab_list  button.active{
+  background: #222222;
+}
+.tab_content{
+  background: #222222;
+}
+.tab_content .tab_block{
+  display: none;
+  padding: 60px;
+  min-height: 530px;
+}
+.tab_content .tab_block.show{
+  display: block;
+  animation: opacity 0.5s linear forwards;
+}
+@keyframes opacity {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.founder{
+  display: flex;
+  gap: 38px;
+}
+.founder img{
+  width: 172px;
+  height: 253px;
+}
+.founder_info{
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+/* =========================Baner======================= */
+.baner{
+  padding: 25px 0px;
+}
+/* =========================Road Map======================= */
+.road_map{
+  background: no-repeat url("../img/svg/circle.svg");
+  background-image: url(../img/svg/circle.svg), url(../img/svg/circle.svg), 
+url(../img/svg/circle.svg);
+    background-repeat: no-repeat;
+  background-position: bottom left, center right, top left;
+  padding-bottom: 138px;
+}
+.wrapp_road{
+  display: flex;
+  flex-direction: column;
+  row-gap: 140px;
+  width: 100%;
+  align-items: center;
+}
+.road_map .card{
+  position: relative;
+  max-width: 540px;
+  background: #222222;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #8DFD1B;
+  padding: 0 15px;
+}
+.wrapp_road .card:not(:last-child)::after {   
+  content: "";
+  height: 40px;
+  border-left: 1px solid #8DFD1B;
+  width: 0px;
+  position: absolute;
+  left: 50%;
+  bottom: -90px;
+}
+.road_map .card_title_wrapp{
+  display: flex;
+  column-gap: 15px;
+  border-bottom: 1px solid #8DFD1B;
+  padding: 15px 0;
+}
+.road_map .card_title_wrapp .number_wrapp{
+  display: flex;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  color: #8DFD1B;
+  border: 1px solid #8DFD1B;
+
+}
+.road_map .card_title_wrapp .number_wrapp.active{
+  background-color: #8DFD1B; 
+  color: black;
+}
+.card_discription{
+  display: flex;
+  padding: 15px 0;
+}
+.card_discription img{
+  max-width: 130px;
+  max-height: 130px;
+}
+
+/* ====================OUR PARTNERS===================== */
+.partners_row{
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 25px 0;
+}
+/* ====================FAQ===================== */
+.faq_block{
+  margin-top: 35px;
+}
+.faq_block .wrapp{
+  max-width: 365px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+}
+.faq_block .wrapp img{
+  max-width: 375px;
+}
+.faq_block .title_block{
+  font-size: 48px;
+  padding: 25px 0;
+}
+.faq_row{
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* align-items: baseline; */
+}
+.faq_accordion{
+  width: 50%;
+  background: #222222;
+}
+/* ========================TEAM====================== */
+.team_block .card{
+  max-width: 320px;
+  padding: 15px;
+  
+}
+.team_block .img_wrapp{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team_block .avatar{
+  transition: transform 0.85s;
+}
+.team_block .img_wrapp:hover .avatar{
+  transform: scale(1.8) translate(10%, 10%);
+}
+.partner_social{
+  position: absolute;
+  left: 10px;
+  display: none;
+  transition: 0.25s;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.team_block .img_wrapp:hover .partner_social{
+  display: flex;
+}
+.team_row{
+  padding: 25px 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.team_block .card_body{
+  text-align: center;
+}
+.team_block .name{
+text-transform: uppercase;
+}
+.team_block .partner_position{
+color: #8DFD1B;
+}
+/* ===================join_discord_block================ */
+.join_discord_block{
+  padding-bottom: 115px;
+}
+.join_discord_block .title_block{
+  font-size: 51px;
+}
+.join_discord_row{
+  align-items: center;
+  justify-content: space-between;
+}
+.join_discord_row img{
+  max-width: 584px;
+}
+.join_discord_row .wrapp{
+  display: flex;
+  flex-direction: column;
+  max-width: 345px;
+  row-gap: 35px;
+}
+.join_discord_block .btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 215px;
+}
+.join_discord_block .btn .icon{
+  max-width: 20px;
+}
+/* ====================Footer================== */
+.footer{
+  padding: 50px 0px;
+  background: #42006A;
+}
+.footer_row{
+  justify-content: space-between;
+}
+.footer .colum_link{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.footer .colum_link a{
+  color: #fff;
+  text-decoration: none;
+}
+.footer .colum_link a:hover{
+  text-decoration: underline;
+}
+.icon_list{
+  display: flex;
+  column-gap: 10px;
+}
